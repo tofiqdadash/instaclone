@@ -5,9 +5,429 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* LOGINPAGE */
+.LoginPage{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(209.43deg, #9E2692 12.36%, #FAA958 89.4%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginpage--form-container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin-left: 10rem;
+  position: relative;
+}
+
+.loginpage--form-container img{
+  margin-bottom: 2.25rem;
+}
+
+.loginpage--form-container input , button{
+  margin-bottom: 1rem;
+  height: 40px;
+background: rgba(190, 180, 180, 0.2);
+border-radius: 7px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.3px);
+-webkit-backdrop-filter: blur(5.3px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.loginpage--form-container button{
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.loginpage--form-container button:disabled{
+  color: gray;
+  background: transparent;
+  cursor: inherit;
+}
+
+
+.loginpage--form-container input{
+  padding-left: 10px;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+ .loginpage--form-container input:focus::placeholder {
+  color: white;
+}
+
+.loginpage--form-container input::placeholder{
+  color: rgb(206, 203, 203);
+}
+
+.device-image{
+  min-width: 400px;
+  height: 100%;
+}
+
+.error-message{
+  position: absolute;
+  top: 86px;
+  left: 50px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #D8000C;
+  padding: 2px 10px;
+}
+
+/* FEED PAGE */
+.FeedPage{
+  background-color: #FAFAFA;
+  width: 100vw;
+}
+
+.fp--nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 2rem;
+  border: 1px solid #EFEFEF;
+  position: fixed;
+  z-index: 100;
+  top:0;
+  left:0;
+   width: 100%;
+   background-color: #FAFAFA;
+}
+
+.fp--nav .instagram-handwriting{
+  width: 103px;
+}
+
+.fp--nav-icons{
+  width: 266px;
+  display: flex;
+  align-items: flex-start;
+  padding: 7px 8px 7px 24px;
+}
+
+.fp--nav-icons img{
+  width: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.fp--posts-container{
+  margin-top: 10rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: white;
+ width: 70%;
+ border: 1px solid #EFEFEF;
+}
+
+.fp--post{
+  margin-bottom: 4rem;
+}
+
+.post-user-details{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.fp--post .fp--link{
+  width: 200px;
+  display: flex;
+  padding: 0 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.post-user-details h4{
+  margin-left: 7px;
+}
+
+.post-user-details .user-profile-image{
+  border-radius: 50%;
+  background-color: #FAA958;
+  width: 34px;
+  background-color: #EFEFEF;
+}
+
+
+.post-image{
+  width: 90%;
+  padding-left: 5%;
+}
+
+.details-icon{
+  position: absolute;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.post-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ padding: 0 20px;
+}
+
+.post-footer-leftside{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  width: 120px;
+}
+
+.post-footer-leftside img{
+  width: 24px;
+}
+
+.save-icon{
+  width: 35px;
+  margin-right: 10px;
+}
+
+.post-footer img{
+  cursor: pointer;
+}
+
+
+.post-likes{
+  font-size: 1.3rem;
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+  padding-left: 25px;
+}
+
+.post-description{
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.post-description p{
+  margin-left: 10px;
+}
+
+/* SIDEBAR */
+.Sidebar{
+  position: fixed;
+  top:70px;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+  z-index: 1000;
+  background-color: #f8f4f4;
+
+}
+
+.main-account{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.main-account-details{
+  height: 100%;
+  margin-left: 15px;
+}
+
+.main-switch-btn{
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+}
+
+.account{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.account-details{
+  margin-right: auto;
+  margin-left: 15px;
+}
+
+.account-details h4,p{
+  margin: 0;
+}
+
+.account-details p{
+  color: gray;
+}
+
+.account img{
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.account .switch-btn{
+  border: none;
+  cursor: pointer;
+  color: #0095F6;
+  margin-right: 30px;
+  font-size: 0.9rem;
+}
+
+.suggestions-text{
+  color: gray;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.suggestions-container {
+  margin-top: 20px;
+}
+
+.suggestions-container .account{
+  height: 60px;
+}
+
+.suggestions-container .account img{
+  width: 35px;
+}
+
+.suggestions-container .account h4{
+  font-size: 0.8rem;
+}
+
+.suggestions-container .account .switch-btn{
+  width: 46px;
+}
+
+.Stories{
+  position: fixed;
+ top: 70px;
+ height: 90px;
+ width: 70%;
+ z-index: 90;
+ background: inherit;
+}
+
+.Stories{
+  display: flex;
+  padding-top: 18px;
+  justify-content: space-evenly;
+}
+
+.story{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story img{
+  border-radius: 50%;
+  border: 1px solid rgb(228, 64, 95);
+  width: 40px;
+  margin-bottom: 3px;
+  border-width: 3px;
+}
+
+.story p{
+  font-size: 15px;
+}
+
+.ProfilePage{
+  width: 935px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.ProfilePage .fp--nav {
+  width: 890px;
+  position: sticky;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.ProfilePage .fp--nav-icons{
+  padding: 0;
+  width: 180px;
+}
+
+
+.images-container{
+ display: flex;
+ flex-wrap: wrap;
+ height: 100%;
+ justify-content: space-evenly;
+ overflow-y: scroll;
+}
+
+
+.images-container img{
+  width: 293px;
+  height: 293px;
+  margin-top: 1rem;
+} 
+
+.images-container img:last-child{
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.react-time-ago{
+  width: 100%;
+  padding: 0 20px;
+  color: gray;
+  font-weight: 400;
+}
+
+.status--container{
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.status--container img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
